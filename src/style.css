@@ -1,0 +1,30 @@
+/* 全局重置 */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #app {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* 后续你自己加的暗色模式变量可以保留在这里 */
+:root {
+  --text: #333;
+  --bg: #fff;
+}
+
+[data-theme="dark"] {
+  --text: #eee;
+  --bg: #1a1a1a;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
